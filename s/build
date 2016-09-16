@@ -6,4 +6,4 @@ fi
 mkdir -p build
 cd build
 cmake .. -DVERSION=$VERSION
-make VERBOSE=1
+make
