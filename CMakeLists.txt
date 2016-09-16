@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(version C)
+project(versioning C)
 
 if(DEFINED VERSION)
 set_source_files_properties(version.c PROPERTIES COMPILE_DEFINITIONS
