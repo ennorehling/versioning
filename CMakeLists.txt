@@ -5,6 +5,7 @@ if(DEFINED VERSION)
 set_source_files_properties(version.c PROPERTIES COMPILE_DEFINITIONS
 "VERSION=\"${VERSION}\"")
 endif()
-add_library(version OBJECT version.c)
-add_executable(hello main.c $<TARGET_OBJECTS:version>)
+add_library(version version.c)
+add_executable(hello main.c)
+target_link_libraries(hello version)
 
