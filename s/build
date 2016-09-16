@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -z $VERSION ]; then
+  VERSION=$(git describe --tags --match "v*.*")
+fi
+mkdir -p build
+cd build
+cmake .. -DVERSION=$VERSION
+make VERBOSE=1
